@@ -2349,6 +2349,10 @@
               "description": "Reference to a template for this deployment",
               "$ref": "#/definitions/nonEmptyString"
             },
+            "condition": {
+              "description": "Evaluate this condition expression to determine whether to run this deployment",
+              "$ref": "#/definitions/string"
+            },
             "parameters": {
               "description": "Parameters used in a deployment template",
               "$ref": "#/definitions/mapping"
