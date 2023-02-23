@@ -1830,7 +1830,14 @@
               "$ref": "#/definitions/nonEmptyString"
             },
             "value": {
-              "$ref": "#/definitions/string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
             },
             "readonly": {
               "$ref": "#/definitions/boolean"
