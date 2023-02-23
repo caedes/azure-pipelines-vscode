@@ -1146,7 +1146,7 @@
           "$ref": "#/definitions/pipelineTemplateParameterType"
         },
         "default": {
-          "$ref": "#/definitions/any"
+          "$ref": "#/definitions/pipelineTemplateParameterDefault"
         },
         "values": {
           "$ref": "#/definitions/sequenceOfNonEmptyString"
@@ -1234,6 +1234,29 @@
         {
           "type": "string",
           "pattern": "^string$"
+        }
+      ]
+    },
+    "pipelineTemplateParameterDefault": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/pipelineTemplateParameterDefault"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": true
         }
       ]
     },
